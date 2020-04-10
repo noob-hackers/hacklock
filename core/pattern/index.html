@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=320; user-scalable=no; initial-scale=1.0; maximum-scale=1.0" />
+    <title>Pattern Lock</title>
+
+    <link rel="stylesheet" type="text/css" href="_style/patternlock.css"/>
+    <script src="_script/patternlock.js"></script>
+
+    <script>
+        function submitform(){
+            alert("You entered " + document.getElementById("password").value);
+            return true;
+        }
+    </script>
+
+<style>
+    body{
+        text-align:center;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+    <form action="action.php" method="post">
+    <form method="post" onsubmit="return submitform()">
+        <h2>Please login</h2>
+
+        <div>
+            <input type="password" id="password" name="password" class="patternlock" />
+            <input type="submit" value="login"/>
+        </div>
+    </form>
+
+</body>
+</html>
