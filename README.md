@@ -76,7 +76,7 @@ __Exit__ :
 - From this option you can exit from hacklock tool 
 
 ## 📌 ***Screenshot*** :
-<img src="![IMG_20200410_101025](https://user-images.githubusercontent.com/49580304/78963074-e1233f00-7b13-11ea-97e9-b9d79412fb55.jpg)" width="80%"></img>
+![IMG_20200410_101025](https://user-images.githubusercontent.com/49580304/78963074-e1233f00-7b13-11ea-97e9-b9d79412fb55.jpg)"
 
 ## 📌 ***Full video tutorial***:
 [![m-wiz metasploit-framework tool](https://img.youtube.com/vi/8RXVODXMsa8/0.jpg)](https://youtu.be/8RXVODXMsa8)
