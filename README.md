@@ -57,6 +57,8 @@ $ bash hacklock.sh
 
 * Now you need internet connection to continue further process and Turn on your device hotspot to get link...
 
+* You will recieve patter pin in below image you can see pattern with numbers
+
 * You can select any option by clicking on your keyboard
 
 * Note:- Don't delete any of the scripts included in core files
@@ -77,6 +79,9 @@ __Exit__ :
 
 ## 📌 ***Screenshot*** :
 ![IMG_20200410_101025](https://user-images.githubusercontent.com/49580304/78963074-e1233f00-7b13-11ea-97e9-b9d79412fb55.jpg)"
+
+![IMG_20200410_103335](https://user-images.githubusercontent.com/49580304/78964248-31e86700-7b17-11ea-8696-7dbf89b4d7de.jpg)
+
 
 ## 📌 ***Full video tutorial***:
 [![m-wiz metasploit-framework tool](https://img.youtube.com/vi/8RXVODXMsa8/0.jpg)](https://youtu.be/8RXVODXMsa8)
