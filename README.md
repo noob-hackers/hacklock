@@ -15,7 +15,7 @@ hacklock is a bash based script which is officially termux from this tool in jus
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ![Screenshot_](https://user-images.githubusercontent.com/49580304/78962692-8c32f900-7b12-11ea-9ddb-dd5d94d825be.jpg)
-![IMG_20200410_093606](https://user-images.githubusercontent.com/49580304/78962877-298e2d00-7b13-11ea-92f3-733825c5005c.jpg)
+![IMG_20200410_101025](https://user-images.githubusercontent.com/49580304/78963074-e1233f00-7b13-11ea-97e9-b9d79412fb55.jpg)
 
 ### 📌 ***Hacklock is available for***:
 
