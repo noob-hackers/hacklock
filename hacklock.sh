@@ -40,7 +40,7 @@ clear
 bash about.sh
 sleep 6.0
 cd $HOME/hacklock/
-bash hacklock.sh
+vk hacklock.sh
 echo
 
 elif [[ $option == 3 || $option == 03 ]]; then
@@ -49,7 +49,7 @@ cd $HOME/hacklock/core/update/
 bash update.sh
 sleep 6
 cd $HOME/hacklock/
-bash hacklock.sh
+vk hacklock.sh
 echo
 elif [[ $option == 4 ]]; then
 exit 1
