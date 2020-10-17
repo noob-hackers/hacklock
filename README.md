@@ -21,6 +21,9 @@ hacklock is a bash based script which is officially termux from this tool in jus
 * Termux
 
 ### 📌 ***Installation and usage guide***:
+
+### ***Manual Installation***:
+
 ```
 $ apt-get update -y
 ```
@@ -28,7 +31,7 @@ $ apt-get update -y
 $ apt-get upgrade -y
 ```
 ```
-$ pkg install python -y 
+$ pkg install python -y
 ```
 ```
 $ pkg install python2 -y
@@ -55,6 +58,18 @@ $ ls
 $ bash hacklock.sh
 ```
 
+### ***Automatic Installation***:
+
+```
+wget https://raw.githubusercontent.com/noob-hackers/hacklock/master/setup.sh
+```
+```
+chmod +x *
+```
+```
+bash setup.sh
+```
+
 * Now you need internet connection to continue further process and Turn on your device hotspot to get link...
 
 * You will recieve patter pin in below image you can see pattern with numbers
@@ -75,7 +90,7 @@ __Update__ :
 - From this option you update the script if there is new update available
 
 __Exit__ :
-- From this option you can exit from hacklock tool 
+- From this option you can exit from hacklock tool
 
 ## 📌 ***Screenshot*** :
 ![IMG_20200410_101025](https://user-images.githubusercontent.com/49580304/78963074-e1233f00-7b13-11ea-97e9-b9d79412fb55.jpg)"
@@ -95,7 +110,7 @@ https://www.noob-hackers.com
 
 ## 👥 ***Join***
 
-### Facebook group: 
+### Facebook group:
 https://www.facebook.com/groups/1936478173310085
 
 ### Telegram channel:
@@ -104,7 +119,7 @@ https://t.me/noobhack
 ### Facebook page:
 https://www.facebook.com/Noob-Hackers-250938565573643
 
-### Instagram: 
+### Instagram:
 https://www.instagram.com/noobhackers352
 
 ### Pinterest:
