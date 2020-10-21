@@ -7,7 +7,7 @@
 <a href="https://bit.ly/3gnUcN3"><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 </p>
 <p align="center">
-<a href="https://bit.ly/3gnUcN3"><img title="Hacklock" src="(https://user-images.githubusercontent.com/49580304/96666403-e4418800-130b-11eb-90bc-938e0825e610.jpg"></a>
+<a href="https://bit.ly/3gnUcN3"><img title="Hacklock" src="https://user-images.githubusercontent.com/49580304/96666403-e4418800-130b-11eb-90bc-938e0825e610.jpg"></a>
 </p>
 <p align="center">
 <a href="https://github.com/noob-hackers"><img title="Github" src="https://img.shields.io/badge/noob-hackers-brightgreen?style=for-the-badge&logo=github"></a>
@@ -90,6 +90,7 @@ __EXIT__ :
 <p align="center">
 <img width="50%" src="https://user-images.githubusercontent.com/49580304/96666397-e0156a80-130b-11eb-935a-f284bd33215b.jpg"/>
 <img width="45%" src="https://user-images.githubusercontent.com/49580304/96666392-ddb31080-130b-11eb-9056-cc427d87afcc.jpg"/>
+<img width="48%" src="https://user-images.githubusercontent.com/49580304/78964248-31e86700-7b17-11ea-8696-7dbf89b4d7de.jpg"/>
 </p>
 
 ## WATCH VIDEO [Termux]
