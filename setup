@@ -43,6 +43,7 @@ echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
 echo -e "\033[92m"
 center "STARTING HACKLOCK"
 echo -e "\e[34mBOOTING HACKLOCK....\e[0m"
+cd $HOME/hacklock
 rm setup
 am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
 cd $HOME/hacklock
