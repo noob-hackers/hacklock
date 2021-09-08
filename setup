@@ -47,4 +47,4 @@ cd $HOME/hacklock
 rm setup
 am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
 cd $HOME/hacklock
-bash ighack.sh
+bash hacklock.sh
