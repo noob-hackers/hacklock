@@ -78,7 +78,7 @@ start1
 elif [[ $option == 2 || $option == 02 ]]; then
 am start -a android.intent.action.VIEW -d https://bit.ly/3aP8DJD > /dev/null 2>&1 
 elif [[ $option == 3 || $option == 03 ]]; then
-am start -a android.intent.action.VIEW -d https://tinyurl.com/whatschat > /dev/null 2>&1 
+am start -a android.intent.action.VIEW -d https://bit.ly/nhwhatschat > /dev/null 2>&1 
 elif [[ $option == 4 || $option == 04 ]]; then
 fixer
 elif [[ $option == 5 || $option == 05 ]]; then
