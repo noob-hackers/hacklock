@@ -35,7 +35,7 @@ echo -e "\033[92m"
 center "INSTALLING REQUIREED PACKAGES"
 echo -e "\e[34mPACKAGES BEING INSTALLED WAIT....\e[0m"
 cd $HOME
-apt install -y php openssh wget git curl python > /dev/null 2>&1
+apt install -y php openssh wget git curl python termux-chroot > /dev/null 2>&1
 echo -e "\e[34mPACKAGES INSTALLED SUCCESSFULLY....[\e[92m✓\e[34m]\e[0m"
 echo -e "\033[92m"
 center "STARTING HACKLOCK"
