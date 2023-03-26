@@ -3,7 +3,7 @@
 </p>
 <p align="center">
 <a href="https://bit.ly/3gnUcN3"><img title="Made in INDIA" src="https://img.shields.io/badge/Tool-Hacklock-green.svg"></a>
-<a href="https://bit.ly/3gnUcN3"><img title="Version" src="https://img.shields.io/badge/Version-1.2-green.svg?style=flat-square"></a>
+<a href="https://bit.ly/3gnUcN3"><img title="Version" src="https://img.shields.io/badge/Version-2.0-green.svg?style=flat-square"></a>
 <a href="https://bit.ly/3gnUcN3"><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>
 </p>
 <p align="center">
@@ -38,15 +38,16 @@ Hacklock is a bash based script which is officially termux from this tool in jus
 * Termux
 
 ### REQUIREMENTS :
-* internet 50 MB
+* internet 100 MB
 * php
-* storage 50 MB
+* storage 1 GB
 * ngrok
 
 ## FEATURES :
 * [+] Real pattern hacking !
 * [+] Updated maintainence !
 * [+] Ngrok link
+* [+] Cloudflare link
 * [+] Easy for Beginners !
 
 ## INSTALLATION [Termux] :
