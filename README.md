@@ -41,12 +41,10 @@ Hacklock is a bash based script which is officially termux from this tool in jus
 * internet 100 MB
 * php
 * storage 1 GB
-* ngrok
 
 ## FEATURES :
 * [+] Real pattern hacking !
-* [+] Updated maintainence !
-* [+] Ngrok link
+* [+] Updated maintenance !
 * [+] Cloudflare link
 * [+] Easy for Beginners !
 
@@ -68,7 +66,7 @@ Hacklock is a bash based script which is officially termux from this tool in jus
 ```
 [+]--Now you need internet connection to continue further process and Turn on your device hotspot to get link...
 
-[+]--You will recieve patter pin in below image you can see pattern with numbers
+[+]--You will receive patter pin in below image you can see pattern with numbers
 
 [+]--You can select any option by clicking on your keyboard
 
