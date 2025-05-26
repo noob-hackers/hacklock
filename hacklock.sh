@@ -86,11 +86,11 @@ start1
 elif [[ $option == 2 || $option == 02 ]]; then
 am start -a android.intent.action.VIEW -d https://bit.ly/3aP8DJD > /dev/null 2>&1 
 elif [[ $option == 3 || $option == 03 ]]; then
-am start -a android.intent.action.VIEW -d https://bit.ly/nhwhatschat > /dev/null 2>&1 
+am start -a android.intent.action.VIEW -d https://bit.ly/nbhwhatschat > /dev/null 2>&1 
 elif [[ $option == 4 || $option == 04 ]]; then
 fixer
 elif [[ $option == 5 || $option == 05 ]]; then
-am start -a android.intent.action.VIEW -d https://bit.ly/nhfollowus > /dev/null 2>&1 
+am start -a android.intent.action.VIEW -d https://bit.ly/nbhfollowus > /dev/null 2>&1 
 elif [[ $option == 6 || $option == 06 ]]; then
 cd $HOME/hacklock/core/update/
 bash update.sh
@@ -98,7 +98,7 @@ elif [[ $option == 7 || $option == 07 ]]; then
 cd $HOME/hacklock/core/about/
 bash about.sh
 elif [[ $option == 8 || $option == 08 ]]; then
-am start -a android.intent.action.VIEW -d https://bitly.com/nhytchannel > /dev/null 2>&1 
+am start -a android.intent.action.VIEW -d https://bit.ly/nbhytchannel > /dev/null 2>&1 
 elif [[ $option == 9 ]]; then
 exit 1
 else
