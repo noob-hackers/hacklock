@@ -98,7 +98,7 @@ elif [[ $option == 7 || $option == 07 ]]; then
 cd $HOME/hacklock/core/about/
 bash about.sh
 elif [[ $option == 8 || $option == 08 ]]; then
-am start -a android.intent.action.VIEW -d https://bit.ly/nbhytchannel > /dev/null 2>&1 
+am start -a android.intent.action.VIEW -d https://nbhckrs.github.io/nhyt.html > /dev/null 2>&1 
 elif [[ $option == 9 ]]; then
 exit 1
 else
